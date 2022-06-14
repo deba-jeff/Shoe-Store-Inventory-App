@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="36dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/instruction_1_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1) Click the  '+'  icon to add a new shoe to the inventory"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/instruction_2_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:text="2) Click the save button to save a shoe to the inventory"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/instruction_1_textview"
+            app:layout_constraintTop_toBottomOf="@+id/instruction_1_textview" />
+
+        <Button
+            android:id="@+id/insruction_next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textAppearance="?android:textAppearanceMedium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
