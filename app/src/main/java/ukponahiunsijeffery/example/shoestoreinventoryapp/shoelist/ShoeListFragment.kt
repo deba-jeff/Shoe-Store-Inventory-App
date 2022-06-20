@@ -29,10 +29,13 @@ class ShoeListFragment : Fragment() {
             R.layout.fragment_shoe_list, container, false)
 
         // Setup FAB ClickListener
-        binding.fabFloatingActionButton.setOnClickListener (
-            Navigation.createNavigateOnClickListener(ShoeListFragmentDirections.
-            actionShoeListFragmentToShoeDetailFragment())
-        )
+        binding.fabFloatingActionButton.setOnClickListener {
+
+            // Clear EditTextFields data of fragment_shoe_detail.xml
+            sharedViewModel.resetEditTextShoeData()
+
+            findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
+        }
 
         // Set up LiveData Observation of mShoesListMutableLiveData for changes
         sharedViewModel.mShoesListMutableLiveData.observe(viewLifecycleOwner, Observer { shoeList ->

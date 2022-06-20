@@ -3,6 +3,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="sharedViewModel"
+            type="ukponahiunsijeffery.example.shoestoreinventoryapp.viewmodel.SharedViewModel" />
+    </data>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -31,6 +36,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
+                android:text="@={sharedViewModel.mName}"
                 android:hint="Shoe Name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/name_textView"
@@ -52,6 +58,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
+                android:text="@={sharedViewModel.mCompanyName}"
                 android:hint="Company"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/company_texView"
@@ -74,6 +81,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
+                android:text="@={sharedViewModel.mShoeSize}"
                 android:hint="Size"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/size_textView"
@@ -95,6 +103,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
+                android:text="@={sharedViewModel.mDescription}"
                 android:hint="Description"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/description_textView"
